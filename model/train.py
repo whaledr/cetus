@@ -31,12 +31,12 @@ class whaledr(object):
     def __init__(self):
         self.CREDS_DATA = {}
         self.BUCKET_NAME = 'whaledr'
-        self.WHALE_PATH = '../data/train_images/whale'
+        self.WHALE_PATH = '../model/data/train_images/whale'
         self.NON_WHALE_PATH = '../data/train_images/non_whale'
         self.PREFIX = 'megaptera'
         self.LOOKUP_DELIMITER = '___'
         self.START_LEN = len(self.PREFIX.split('/')[0]) + 1
-        self.WHALE_LOOKUP_FILE = '../data/megaptera-13ae9-sampleSummary-export.json'
+        self.WHALE_LOOKUP_FILE = '../model/data/megaptera-13ae9-sampleSummary-export.json'
         self.HYDROPHONE_NAME = ('LJ01C', 'LJ01A') # make this a tuple ('LJ01C', 'LJ01A')
         self.TRAIN_DIR = os.path.join(os.getcwd() + os.sep + 'train_images')
         self.CATEGORIES = ['whale', 'non_whale']
@@ -46,7 +46,7 @@ class whaledr(object):
         self.BATCH_SIZE = 16
         self.EPOCS = 10
         self.LAST_LAYERS = 10
-        self.MODEL_WEIGHT_CHECKPOINT_PATH = '../data/model_weights'
+        self.MODEL_WEIGHT_CHECKPOINT_PATH = '../model/data/model_weights'
 
     def load_creds(self):
         """
