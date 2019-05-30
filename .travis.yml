@@ -1,0 +1,33 @@
+language: python
+env:
+  - PYTHON_VERSION="3.4"
+  - PYTHON_VERSION="3.5"
+  - PYTHON_VERSION="3.6"
+# command to install dependencies
+os:
+  - linux
+install:
+  # Install conda
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda update --yes conda
+  - conda create --yes -n ci "python=$PYTHON_VERSION"
+  - source activate ci
+  - which python
+  - which pip
+  - python --version
+  - pip --version
+  # command to install dependencies
+  - pip install coveralls
+  - pip install flake8
+  - pip install nose
+  - pip install scipy
+# command to run tests
+script:
+  - echo "Run script here"
+after_success:
+  - echo "Finished"
