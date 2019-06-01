@@ -1,11 +1,10 @@
 language: python
 env:
-  - PYTHON_VERSION="3.4"
   - PYTHON_VERSION="3.5"
-  - PYTHON_VERSION="3.6"
 # command to install dependencies
 os:
   - linux
+ 
 install:
   # Install conda
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
@@ -25,9 +24,21 @@ install:
   - pip install coveralls
   - pip install flake8
   - pip install nose
-  - pip install scipy
+  - pip install pandas
+  - pip install boto3
 # command to run tests
 script:
   - echo "Run script here"
 after_success:
   - echo "Finished"
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then 
+      git config user.email "travis@travis.org";
+      git config user.name "travis";
+      git pull;
+      cd data;
+      python files_counter.py;
+      git add Readme.md;
+      git commit --allow-empty -m "updated README.md";
+      git push https://pshivraj:$GITHUB_API_KEY@$GITHUB_URL_MASTER HEAD:master;
+    fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then echo "Non cron job process" ; fi
