@@ -31,3 +31,5 @@ script:
   - echo "Run script here"
 after_success:
   - echo "Finished"
+  - if [ "$TRAVIS_EVENT_TYPE" = "cron" ] ; then echo "Run prediction script weekly" ; fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then echo "Non cron job process" ; fi
