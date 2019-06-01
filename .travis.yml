@@ -39,7 +39,7 @@ after_success:
   - cat test.md
   - git add test.md
   - git commit --allow-empty -m "updated README.md"
-  - git push https://pshivraj:${GITHUB_API_KEY}@${GH_REF} HEAD:master
+  - git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master
   - echo "Finished"
   - if [ "$TRAVIS_EVENT_TYPE" = "cron" ] ; then echo "Run prediction script weekly" ; fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then echo "Non cron job process" ; fi
