@@ -37,8 +37,8 @@ class s3_file_count(object):
         final_df.to_csv('test.md', sep="|", index=False)
 
 if __name__ == '__main__':
-    aws_access_key_id = ''
-    aws_secret_access_key = ''
+    aws_access_key_id = os.environ.get('aws_access_key_id')
+    aws_secret_access_key = os.environ.get('aws_secret_access_key')
     bucket_name = 'whaledr'
     prefix = 'megaptera'    
     s3_file_count = s3_file_count(aws_access_key_id, aws_secret_access_key, bucket_name, prefix)
