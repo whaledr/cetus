@@ -34,7 +34,7 @@ class s3_file_count(object):
         cols = df.columns
         df_markdown = pd.DataFrame([['---',]*len(cols)], columns=cols)
         final_df = pd.concat([df_markdown, df])
-        final_df.to_csv('test.md', sep="|", index=False)
+        final_df.to_csv('Readme.md', sep="|", index=False)
 
 if __name__ == '__main__':
     aws_access_key_id = os.environ.get('aws_access_key_id')
