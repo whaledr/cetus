@@ -30,16 +30,15 @@ install:
 script:
   - echo "Run script here"
 after_success:
-  - git config user.email "travis@travis.org"
-  - git config user.name "travis"
-  - git pull
-  - cd data
-  - rm Readme.md
-  - python files_counter.py
-  - cat test.md
-  - git add test.md
-  - git commit --allow-empty -m "updated README.md"
-  - git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master
   - echo "Finished"
-  - if [ "$TRAVIS_EVENT_TYPE" = "cron" ] ; then echo "Run prediction script weekly" ; fi
+  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then 
+      git config user.email "travis@travis.org"
+      git config user.name "travis"
+      git pull
+      cd data
+      python files_counter.py
+      git add test.md
+      git commit --allow-empty -m "updated README.md"
+      git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master
+    fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then echo "Non cron job process" ; fi
