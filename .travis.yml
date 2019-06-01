@@ -39,6 +39,6 @@ after_success:
       python files_counter.py
       git add test.md
       git commit --allow-empty -m "updated README.md"
-      git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master
+      git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master ;
     fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ] ; then echo "Non cron job process" ; fi
