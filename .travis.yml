@@ -37,7 +37,7 @@ after_success:
       git pull;
       cd data;
       python files_counter.py;
-      git add test.md;
+      git add Readme.md;
       git commit --allow-empty -m "updated README.md";
       git push https://pshivraj:$GITHUB_API_KEY@github.com/pshivraj/cetus HEAD:master;
     fi
