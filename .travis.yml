@@ -31,7 +31,7 @@ script:
   - echo "Run script here"
 after_success:
   - echo "Finished"
-  - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then 
+  - if [ "$TRAVIS_EVENT_TYPE" == "cron" ]; then 
       git config user.email "travis@travis.org";
       git config user.name "travis";
       git pull;
