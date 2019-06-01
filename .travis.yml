@@ -6,6 +6,10 @@ env:
 # command to install dependencies
 os:
   - linux
+  
+before_install:
+  - git pull
+
 install:
   # Install conda
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
