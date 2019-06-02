@@ -237,7 +237,7 @@ if __name__ == '__main__':
     
     url_list = get_data_url_list(mainurl)
     try:
-        nCores = 12
+        nCores = 6
         
         # double-check the number of cores: Make sure it does not exceed what is available
         nCores = multiprocessing.cpu_count() if nCores > multiprocessing.cpu_count() else nCores
