@@ -24,9 +24,8 @@ source ~/.bashrc
 conda create -n whaledr python=3.6
 conda activate whaledr
 git clone https://github.com/whaledr/cetus.git
-cd cetus/data-preprocessing
 pip install -r requirements.txt
-cd data-preprocessing
+cd cetus/data-preprocessing
 ```
 
 ### Credentials
