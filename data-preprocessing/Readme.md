@@ -2,7 +2,7 @@
 
 This section of the Pipeline involves generating [spetrograms](https://en.wikipedia.org/wiki/Spectrogram) which would be eventually used by the model to classify whale sound.
 
-| Sample Whale Spectrogram | Sample Non-Whale Spectrogram |
+|     Whale Spectrogram    |    Non-Whale Spectrogram     |
 |--------------------------|------------------------------|
 | ![Whale](../examples/OO_HYEA1__YDH_2019_01_12T02_47_40.jpg) | ![Non-whale](../examples/OO_HYEA1__YDH_2019_01_12T00_03_10.jpg) |
 | ![Whale-sound-file](../examples/OO_HYEA1__YDH_2019_01_12T02_47_40.wav) | ![Non-Whale-sound-file](../examples/OO_HYEA1__YDH_2019_01_12T02_47_40.wav)
