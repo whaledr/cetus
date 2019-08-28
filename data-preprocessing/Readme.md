@@ -1,6 +1,6 @@
 # Whaledr spectrogram generation
 
-This section of the Pipeline involves generating [spetrograms](https://en.wikipedia.org/wiki/Spectrogram) which would be eventually used by the model to classify whale sound.
+This section of the Pipeline involves generating [spectrograms](https://en.wikipedia.org/wiki/Spectrogram) which would be eventually used by the model to classify whale sounds.
 
 |     Whale Spectrogram    |    Non-Whale Spectrogram     |
 |--------------------------|------------------------------|
@@ -56,4 +56,4 @@ The process runs into memory issues if number of cores used and total memory ava
 
 ## Further Reading
 
-For more detailed explaination of the process alongside do's and dont's while running the script refer to this elaborate documentation:[whale_spectrogram](https://github.com/whaledr/whalebooks/tree/master/shiv/whale_spectrogram)   
+For more detailed explaination of the process plus do's and dont's refer to the [whale_spectrogram](https://github.com/whaledr/whalebooks/tree/master/shiv/whale_spectrogram) page.
