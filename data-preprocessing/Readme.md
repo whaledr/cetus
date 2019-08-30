@@ -56,4 +56,4 @@ The process runs into memory issues if number of cores used and total memory ava
 
 ## Further Reading
 
-For more detailed explaination of the process plus do's and dont's refer to the [whale_spectrogram](https://github.com/whaledr/whalebooks/tree/master/shiv/whale_spectrogram) page.
+For more detailed explaination of the process plus do's and dont's refer to the [whale_spectrogram](https://github.com/pshivraj/whalebooks/tree/master/shiv/whale_spectrogram) page.
