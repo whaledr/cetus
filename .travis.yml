@@ -44,12 +44,4 @@ after_success:
     fi
   - if [ "$TRAVIS_EVENT_TYPE" != "cron" ]; then 
       echo "Manual run initiated";
-      git config user.email "travis@travis.org";
-      git config user.name "travis";
-      git pull;
-      cd data;
-      python files_counter.py;
-      git add Readme.md;
-      git commit --allow-empty -m "updated README.md";
-      git push https://pshivraj:$GITHUB_API_KEY@$GITHUB_URL_MASTER HEAD:master;
     fi
