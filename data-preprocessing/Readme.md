@@ -52,7 +52,7 @@ Once done correctly you should be good to go to execute the script. It is recomm
 
 
 ***Recommended setup for running this script without failure is AWS c5.4xlarge and using 6 cores instead of all 16.
-The process runs into memory issues if number of cores used and total memory available is not taking into consideration and owing to multiproceessing it can get difficult to debug at times.***
+The process runs into memory issues if number of cores used and total memory available is not taken into consideration and owing to multiproceessing it can get difficult to debug at times.***
 
 ## Further Reading
 
